@@ -6,7 +6,10 @@ scanner.addListener('scan', function (content) {
 
   document.getElementById("markP").style.display="none";
   document.getElementById("searchD").style.display="block";
-
+  // document.getElementById("name").style.display="none";
+  // document.getElementById("institute").style.display="none";
+  // document.getElementById("email").style.display="none";
+  // document.getElementById("gender").style.display="none";
 
   document.getElementById("Uniq").innerHTML = fireId;
 
@@ -32,6 +35,10 @@ function fireSearch(){
          console.log("Not exist");
        else
          {
+           document.getElementById("name").style.display="block";
+           document.getElementById("institute").style.display="block";
+           document.getElementById("email").style.display="block";
+           document.getElementById("gender").style.display="block";
            document.getElementById("name").innerHTML = "Name: "+newUser.name;
            document.getElementById("institute").innerHTML = "Institution: "+newUser.institute;
            document.getElementById("email").innerHTML = "Email: "+newUser.email;
