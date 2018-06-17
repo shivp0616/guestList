@@ -45,19 +45,14 @@ function fireSearch(){
            document.getElementById("gender").innerHTML = "Gender: "+newUser.gender;
            document.getElementById("markP").style.display="block";
            document.getElementById("searchD").style.display="none";
-           // playersRef.update({
-           //    attandance:'absent'
-           //  });
         }
       });
 }
 
 
 function markPre(){
-
-// var playersRef = firebase.database().ref(fireId)
+  
      var playersRef = firebase.database().ref(fireId)
-
      playersRef.on("value", function(snapshot) {
        var newUser = snapshot.val();
            document.getElementById("markP").style.display="none";
